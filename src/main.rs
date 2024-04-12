@@ -3,12 +3,12 @@ use arti_client::{TorClient, TorClientConfig};
 use http::{uri::Scheme, Uri};
 use http_body_util::{BodyExt, Empty};
 use hyper::{
-    body::{Body, Bytes},
+    body::{Bytes},
     Request,
 };
 use hyper_util::rt::TokioIo;
 use std::str::FromStr;
-use tokio::io::{self, AsyncReadExt, AsyncWriteExt};
+use tokio::io::{self, AsyncWriteExt};
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
